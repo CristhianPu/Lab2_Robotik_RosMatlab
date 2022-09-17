@@ -18,4 +18,6 @@ esta libreria se ejecuta el siguiente comando desde la terminal:
 ```console
 sudo apt install python3-pip
 ```
-
+ ### Ejecución del código
+ Para ejecutar el codigo se requiere 
+ 

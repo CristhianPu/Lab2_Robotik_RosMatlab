@@ -13,11 +13,27 @@ Se inicia instalando el paquete **pynput.keyboard** el cual contiene clases para
 ```console
 pip install pynput 
 ```
-Es probable que no se encuentre la orden «pip», pero se puede instalar con el comando:
-esta libreria se ejecuta el siguiente comando desde la terminal:
+Es probable que no se encuentre la orden «pip», pero se puede instalar ejecutando el comando:
 ```console
 sudo apt install python3-pip
 ```
  ### Ejecución del código
- Para ejecutar el codigo se requiere 
- 
+ Se requiere abrir tres terminales y ejecutar los siguientes comandos:
+ #### Primer terminal
+ Es el nodo maestro, el cual lanza los nodos requeridos para el funcionamiento de ROS 
+ ```console
+roscore
+```
+  #### Segundo terminal
+ Lanza el nodo de la tortuga, contenido en el paquete de turtlesim, este paquete viene instalado por defecto con los demás paquetes de ROS 
+ ```console
+rosrun turtlesim turtlesim_node
+```
+#### Tercer terminal 
+ Por ultimo se ejecuta el programa de Python llamado myTeleopKey.py, **es necesario que la terminal se abra dentro de la carpeta que contiene el archivo**, esto se puede hacer especificando la ruta de la carpeta o abriendo la carpeta y eligiendo la opción de "Abrir en una terminal" que aparece al dar click derecho al interior de la carpeta
+
+ ```console
+python myTeleopKey.py
+```
+Se debe abrir una terminal
+### Explicación del código 

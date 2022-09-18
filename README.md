@@ -1,4 +1,4 @@
-# Laboratorio 2: Introducción a ROSY
+# Laboratorio 2: Introducción a ROS
 ## A. Comandos de Linux
 Revisando el libro de Mark G. Sobell, "A Practical Guide to Linux Commands,Editors and Shell Programming" se tiene que los comandos mas usado son:
 * `cd` Moverse entre directorios. "cd Downloads" "cd ..".
@@ -27,6 +27,7 @@ Es probable que no se encuentre la orden «pip», pero se puede instalar ejecuta
 sudo apt install python3-pip
 ```
  ### Ejecución del código
+ https://github.com/CristhianPu/Lab2_Robotik_RosMatlab/issues/2#issue-1377172208
  Se requiere abrir tres terminales y ejecutar los siguientes comandos:
  #### Primer terminal
  Es el nodo maestro, el cual lanza los nodos requeridos para el funcionamiento de ROS 
@@ -44,5 +45,5 @@ rosrun turtlesim turtlesim_node
  ```console
 python myTeleopKey.py
 ```
-Se debe abrir una terminal
+Una vez ejecutado este ultimo comando debe desplegarse el siguiente menu:
 ### Explicación del código 

@@ -8,7 +8,7 @@ Revisando el libro de Mark G. Sobell, "A Practical Guide to Linux Commands,Edito
 ## B. Conexion ROS y Matlab
 
 
-##C. Implementación en Python
+## C. Implementación en Python
 Para la segunda parte del laboratorio se requiere escribir un código en Python que permita operar una tortuga del paquete turtlesim con el teclado,
 cumpliendo las siguientes especificaciones:
 * Se debe mover hacia adelante y hacia atrás con las teclas W y S

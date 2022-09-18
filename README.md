@@ -27,7 +27,10 @@ Es probable que no se encuentre la orden «pip», pero se puede instalar ejecuta
 sudo apt install python3-pip
 ```
  ### Ejecución del código
+ 
  https://user-images.githubusercontent.com/53317895/190927270-e21fafde-22e5-4954-af09-41735a648172.mp4
+ 
+ 
  Se requiere abrir tres terminales y ejecutar los siguientes comandos:
  #### Primer terminal
  Es el nodo maestro, el cual lanza los nodos requeridos para el funcionamiento de ROS 

@@ -1,4 +1,4 @@
-### Laboratorio 2: Introducción a ROSY
+# Laboratorio 2: Introducción a ROSY
 ## A. Comandos de Linux
 Revisando el libro de Mark G. Sobell, "A Practical Guide to Linux Commands,Editors and Shell Programming" se tiene que los comandos mas usado son:
 * `cd` Moverse entre directorios. "cd Downloads" "cd ..".

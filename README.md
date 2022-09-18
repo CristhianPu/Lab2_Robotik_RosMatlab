@@ -1,9 +1,9 @@
 ### Laboratorio 2: Introducción a ROSY
 ## A. Comandos de Linux
 Revisando el libro de Mark G. Sobell, "A Practical Guide to Linux Commands,Editors and Shell Programming" se tiene que los comandos mas usado son:
-* 'cd' Moverse entre directorios. "cd Downloads" "cd ..".
-* 'ls' Ver el contenido de la ruta actual o la que se especifique. "ls Downloads" 
-* 'comando --help' Obtener ayuda acerca de un comando.
+* `cd` Moverse entre directorios. "cd Downloads" "cd ..".
+* ls Ver el contenido de la ruta actual o la que se especifique. "ls Downloads" 
+* comando --help Obtener ayuda acerca de un comando.
 
 ## B. Conexion ROS y Matlab
 

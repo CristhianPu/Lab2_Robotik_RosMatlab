@@ -17,6 +17,8 @@ cumpliendo las siguientes especificaciones:
 * Debe dar un giro de 180° con la tecla ESPACIO
 * Adicionalmente: Limpia la trayectoria con la letra C
 
+https://user-images.githubusercontent.com/53317895/190927226-6b0b070e-a585-4e16-aef4-90da174061b9.mp4
+
 ### Reconocer entradas del teclado 
 Se inicia instalando el paquete **pynput.keyboard** el cual contiene clases para controlar y monitorear el teclado. **pynput** es la biblioteca de Python que se puede usar para capturar entradas de teclado. Para realizar la instalación de esta libreria se ejecuta el siguiente comando desde la terminal:
 ```console
@@ -27,11 +29,11 @@ Es probable que no se encuentre la orden «pip», pero se puede instalar ejecuta
 sudo apt install python3-pip
 ```
  ### Ejecución del código
+  
+ Se requiere abrir tres terminales y ejecutar los siguientes comandos:
  
  https://user-images.githubusercontent.com/53317895/190927270-e21fafde-22e5-4954-af09-41735a648172.mp4
  
- 
- Se requiere abrir tres terminales y ejecutar los siguientes comandos:
  #### Primer terminal
  Es el nodo maestro, el cual lanza los nodos requeridos para el funcionamiento de ROS 
  ```console
@@ -49,5 +51,7 @@ rosrun turtlesim turtlesim_node
 python myTeleopKey.py
 ```
 Una vez ejecutado este ultimo comando debe desplegarse el siguiente menu:
-<p align="center"><img height=300 src="./Multimedia/Menu.jpeg" alt="Menu" /></p>
+
+<p align="center"><img height=300 src="./MultimediaLab2/Menu.jpeg" alt="Menu" /></p>
+
 ### Explicación del código 

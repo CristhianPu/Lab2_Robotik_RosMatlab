@@ -54,4 +54,6 @@ Una vez ejecutado este ultimo comando debe desplegarse el siguiente menu:
 
 <p align="center"><img height=300 src="./MultimediaLab2/Menu.jpeg" alt="Menu" /></p>
 
-### Explicación del código 
+### Explicación del código (myTeleopKey.py)
+
+En la primer sección del codigo se importan las librerias de ROS mediante las cuales se opera la tortuga, a partir de estas librerias se accede a funciones y servicios de Turtlesim, en seguida inicia la clase ** miTeleopKey() ** 

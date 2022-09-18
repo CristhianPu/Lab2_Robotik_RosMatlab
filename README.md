@@ -49,4 +49,5 @@ rosrun turtlesim turtlesim_node
 python myTeleopKey.py
 ```
 Una vez ejecutado este ultimo comando debe desplegarse el siguiente menu:
+<p align="center"><img height=300 src="./Multimedia/Menu.jpeg" alt="Menu" /></p>
 ### Explicación del código 

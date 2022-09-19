@@ -50,6 +50,7 @@ rosrun turtlesim turtlesim_node
  ```console
 python myTeleopKey.py
 ```
+
 Una vez ejecutado este ultimo comando debe desplegarse el siguiente menu:
 
 <p align="center"><img height=300 src="./MultimediaLab2/Menu.jpeg" alt="Menu" /></p>
@@ -71,6 +72,8 @@ En la primer sección del codigo se importan las librerias de ROS mediante las c
                   """
         rospy.loginfo(welcome)
 
+ ```
+```python 
         # Se detecta y almacena como una variable la tecla presionada
         self.keysPressed = set()
         listener = Listener(on_press=self.onPress, on_release=self.onRelease)
@@ -80,24 +83,33 @@ En la primer sección del codigo se importan las librerias de ROS mediante las c
         while not rospy.is_shutdown():
             linear = 0
             angular = 0
+      # Funciones para detectar tecla precionada   
+    def onPress(self, key):
+        print("\033[A")  # Borra en la tecla impresa en la terminal 
+        self.keysPressed.add(key) 
+    def onRelease(self, key):
+        self.keysPressed.remove(key)
 
+ ```
+```python 
             # Las teclas W S A D aumentan o decrecen la velocidad lineal y angular
             if KeyCode.from_char('w') in self.keysPressed:
                 linear += 1
-
-            if KeyCode.from_char('s') in self.keysPressed:
-                linear -= 1
-
-            if KeyCode.from_char('a') in self.keysPressed:
-                angular += np.pi/2
-
-            if KeyCode.from_char('d') in self.keysPressed:
-                angular -= np.pi/2
-
             # Se publica la velocidad
             self.pubVel(linear, angular)
             rate.sleep()
 
+     # Funcion para publicar velocidad   
+    def pubVel(self, linear, angular): 
+        pub = rospy.Publisher('/turtle1/cmd_vel', Twist, queue_size=10)
+        msg = Twist()
+        msg.linear.x = linear
+        msg.angular.z = angular
+        pub.publish(msg)
+
+
+ ```
+```python 
             # La tecla espacio realiza una rotación relativa
             if Key.space in self.keysPressed:
                 rospy.wait_for_service('/turtle1/teleport_relative')
@@ -108,6 +120,8 @@ En la primer sección del codigo se importan las librerias de ROS mediante las c
                 except rospy.ServiceException as e:
                      print(str(e))
 
+ ```
+```python 
            # La tecla r realiza un movimiento absoluto
             if KeyCode.from_char('r') in self.keysPressed:
                 rospy.wait_for_service('/turtle1/teleport_absolute')
@@ -119,6 +133,8 @@ En la primer sección del codigo se importan las librerias de ROS mediante las c
                 except rospy.ServiceException as e:
                     print(str(e))
 
+ ```
+```python 
               # La tecla C limpia la trayectoria realizada
             if KeyCode.from_char('c') in self.keysPressed:
                 try:
@@ -129,18 +145,4 @@ En la primer sección del codigo se importan las librerias de ROS mediante las c
                 except rospy.ServiceException as e:  
                      print(str(e))
                                   
-      # Funciones para detectar tecla precionada   
-    def onPress(self, key):
-        print("\033[A")  # Borra en la tecla impresa en la terminal 
-        self.keysPressed.add(key) 
-    def onRelease(self, key):
-        self.keysPressed.remove(key)
-
-     # Funcion para publicar velocidad   
-    def pubVel(self, linear, angular): 
-        pub = rospy.Publisher('/turtle1/cmd_vel', Twist, queue_size=10)
-        msg = Twist()
-        msg.linear.x = linear
-        msg.angular.z = angular
-        pub.publish(msg)
 ```

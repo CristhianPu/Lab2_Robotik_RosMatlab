@@ -58,7 +58,7 @@ Una vez ejecutado este ultimo comando debe desplegarse el siguiente menu:
 ### Explicación del código 
 
 En la primer sección del codigo se importan las librerias de ROS mediante las cuales se opera la tortuga, a partir de estas librerias se accede a funciones y servicios de Turtlesim, en seguida inicia la clase **miTeleopKey( )**
-
+* Se presenta un menú en la consola mediante la función rospy.loginfo(), el cual es un metodo de ROS para presentar un mensaje, en este caso funciona similar a un print
  ```python
    # Print de comandos
         welcome = """\n Presiona las teclas para desplazar la tortuga
@@ -71,8 +71,8 @@ En la primer sección del codigo se importan las librerias de ROS mediante las c
             * R: Vuelve a posición inicial
                   """
         rospy.loginfo(welcome)
-
  ```
+* Se realiza la implementación de la libreria pynput.keyboard, mediante la cual se detecta la letra se detecta la tecla pesionada, se añade y remueve como variable 
 ```python 
         # Se detecta y almacena como una variable la tecla presionada
         self.keysPressed = set()
@@ -89,8 +89,9 @@ En la primer sección del codigo se importan las librerias de ROS mediante las c
         self.keysPressed.add(key) 
     def onRelease(self, key):
         self.keysPressed.remove(key)
+```
 
- ```
+* Para las letras W, S, A y D se realiza la publicación de un mensaje de tipo Twist al nodo de la tortuga, especificamente al topico **cmd_vel** que recibe información de la velocidad lineal y angular del robot 
 ```python 
             # Las teclas W S A D aumentan o decrecen la velocidad lineal y angular
             if KeyCode.from_char('w') in self.keysPressed:
@@ -109,6 +110,10 @@ En la primer sección del codigo se importan las librerias de ROS mediante las c
 
 
  ```
+ * Las teclas espacio, R y C, utilizan metodos diferentes para controlar la tortuga, en este caso se utilizan servicios asociados al nodo, especificamente los servicios: 
+ ** /teleport_relative, el cual recibe como argumentos posición lineal y angulo, posibilitando el movimiento de la tortuga desde su posición actual 
+ ** /teleport_absolute, este servicio recibe como argumentos las coordenadas x,y de la tortuga y su angulo respecto al eje horizonal
+ ** /clear, este servicio limpia la pantalla en la cual se mueve la tortuga 
 ```python 
             # La tecla espacio realiza una rotación relativa
             if Key.space in self.keysPressed:

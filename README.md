@@ -111,9 +111,9 @@ En la primer sección del codigo se importan las librerias de ROS mediante las c
 
  ```
  * Las teclas espacio, R y C, utilizan metodos diferentes para controlar la tortuga, en este caso se utilizan servicios asociados al nodo, especificamente los servicios: 
- ** /teleport_relative, el cual recibe como argumentos posición lineal y angulo, posibilitando el movimiento de la tortuga desde su posición actual 
- ** /teleport_absolute, este servicio recibe como argumentos las coordenadas x,y de la tortuga y su angulo respecto al eje horizonal
- ** /clear, este servicio limpia la pantalla en la cual se mueve la tortuga 
+   * /teleport_relative, el cual recibe como argumentos posición lineal y angulo, posibilitando el movimiento de la tortuga desde su posición actual 
+   * /teleport_absolute, este servicio recibe como argumentos las coordenadas x,y de la tortuga y su angulo respecto al eje horizonal
+   * /clear, este servicio limpia la pantalla en la cual se mueve la tortuga 
 ```python 
             # La tecla espacio realiza una rotación relativa
             if Key.space in self.keysPressed:

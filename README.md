@@ -16,11 +16,14 @@ Existen muchos otros comandos de consola, pero estos son comandos para empezar a
 ## B. Conexion ROS y Matlab
 
 Creado el nodo con los comandos `roscore` y `rosrun turtlesim turlesim_node` cada uno en una terminal, luego abrir y correr el archivo `Lab2.m`.
+
+### Movimiento de la tortuga (Topicos Publicadores y Suscriptores)
 En este codigo primero se realiza la conexión a matlab con el comando `rosinit`; luego, para hacer mover la torutuga se usa el topico `cmd_vel` y se usa el comando de matlab `rospublisher` para crear el publicador y el mensaje del topico. Este mensaje se puede modificar para actualizar la velocidad lineal y angular en cada eje X, Y, Z, segun se requiera y se envia con el comando `send`. Para este caso se ajusto el movimiento a las teclas como se muestra en el siguiente punto del taller.
 
+### Modificar posición tortuga (Uso de Servicios)
 Para conocer la posición de la tortuga se tiene el topico `pose`, pero este solo permite conocer la posición y orientación de la torutuga, es decir suscribirse usando el comando de matlab 'rossubscriber', para modificar la posición se tiene el servicio 'teleport_absolute', pero como se trata de un servicio, para acceder es necesario crear un cliente usando el comando de matlab `rossvcclient` y enviar un mensaje con la posición actualizada con el comando 'call'. 
 
-##C. Implementación en Python
+## C. Implementación en Python
 
 Para la segunda parte del laboratorio se requiere escribir un código en Python que permita operar una tortuga del paquete turtlesim con el teclado,
 cumpliendo las siguientes especificaciones:

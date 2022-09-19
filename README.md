@@ -56,9 +56,9 @@ Una vez ejecutado este ultimo comando debe desplegarse el siguiente menu:
 
 ### Explicación del código (myTeleopKey.py)
 
-En la primer sección del codigo se importan las librerias de ROS mediante las cuales se opera la tortuga, a partir de estas librerias se accede a funciones y servicios de Turtlesim, en seguida inicia la clase **miTeleopKey( ) ** 
+En la primer sección del codigo se importan las librerias de ROS mediante las cuales se opera la tortuga, a partir de estas librerias se accede a funciones y servicios de Turtlesim, en seguida inicia la clase  **miTeleopKey( )** 
 
 
  ```python
-python myTeleopKey.py
+ myTeleopKey.py
 ```

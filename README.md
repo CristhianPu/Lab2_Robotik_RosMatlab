@@ -1,9 +1,18 @@
 # Laboratorio 2: Introducción a ROS
 ## A. Comandos de Linux
-Revisando el libro de Mark G. Sobell, "A Practical Guide to Linux Commands,Editors and Shell Programming" se tiene que los comandos mas usado son:
+Revisando el libro de Mark G. Sobell, "A Practical Guide to Linux Commands,Editors and Shell Programming" resaltan los siguientes comandos:
+* `comando --help` Obtener ayuda acerca de un comando.
+* `ls` Ver el contenido de la ruta actual o la que se especifique. "ls Downloads" 
+* `cp` Copiar un archivo.
+* `echo` mostrar texto
+* `bzip2`,`bunzip2` Comprimir y Descomprimir archivos.
+* `mkdir` Crear un directorio.
 * `cd` Moverse entre directorios. "cd Downloads" "cd ..".
 * ls Ver el contenido de la ruta actual o la que se especifique. "ls Downloads" 
 * comando --help Obtener ayuda acerca de un comando.
+* `su/sudo` Priviligios de administrador.
+
+Existen muchos otros comandos de consola, pero estos son comandos para empezar a familiarizarse con el entorno de linux.
 
 ## B. Conexion ROS y Matlab
 

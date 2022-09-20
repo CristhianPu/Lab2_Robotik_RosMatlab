@@ -26,7 +26,8 @@ En este codigo primero se realiza la conexión a matlab con el comando `rosinit`
 <p align="center"><img height=300 src="./MultimediaLab2/cris1.png" alt="Menu" /></p>
 ### Modificar posición tortuga (Uso de Servicios)
 Para conocer la posición de la tortuga se tiene el topico `pose`, pero este solo permite conocer la posición y orientación de la torutuga, es decir suscribirse usando el comando de matlab 'rossubscriber', para modificar la posición se tiene el servicio 'teleport_absolute', pero como se trata de un servicio, para acceder es necesario crear un cliente usando el comando de matlab `rossvcclient` y enviar un mensaje con la posición actualizada con el comando 'call'. 
-<p align="center"><img height=300 src="./MultimediaLab2/cris2.jpeg" alt="Menu" /></p>
+
+<p align="center"><img height=300 src="./MultimediaLab2/cris2.jpg" alt="Menu" /></p>
 
 ## C. Implementación en Python
 Para la segunda parte del laboratorio se requiere escribir un código en Python que permita operar una tortuga del paquete turtlesim con el teclado,

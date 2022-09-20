@@ -148,6 +148,9 @@ En la primer sección del codigo se importan las librerias de ROS mediante las c
                      clear_bg()
                      print('Limpiar trayectoria')
                 except rospy.ServiceException as e:  
-                     print(str(e))
-                                  
+                     print(str(e))                                  
 ```
+
+# Conclusiones 
+
+* A partir de este primer acercamiento con ROS podemos identificar la flexibilidad y facilidades que brinda al momento de comunicarnos y controlar un robot (en este caso el Turtle bot). Resulta imprescindible entender correctamente la estructura de nodos, topicos y servicios para poder sacar el mayor provecho e implementarla en proyectos de robotica 
